@@ -2,14 +2,20 @@ package com.joshuayingwhat.kotlin
 
 fun main() {
 
-    println(describe("dxx"))
+    println(describe(1, "1"))
 
+    var hasPerfix = hasPerfix(3)
+
+    println("hasPerfix = $hasPerfix")
 }
 
-fun describe(obj: Any):Any =
+fun describe(obj: Any, s: String): Any =
     when (obj) {
-        1 -> 1
-        "hello" -> "hello"
-        0 -> 0
+        s.toIntOrNull() -> println("s encode $s")
         else -> "unknow"
     }
+
+fun hasPerfix(x: Any) = when (x) {
+    is String -> x
+    else -> false
+}
