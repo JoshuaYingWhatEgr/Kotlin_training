@@ -16,4 +16,10 @@ class Person(_name: String) {
     init {
         "info = $info".also(::println)
     }
+
+    var name = _name;
+
+    fun show() {
+        println("$name")
+    }
 }
