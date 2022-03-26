@@ -1,19 +1,17 @@
 package com.joshuayingwhat.kotlin
 
-/**
- * 次构造函数
- */
 fun main() {
-    var c = Constructor("hello", 21)
+    var c = Constructor()
 }
 
-class Constructor(_name: String) {
 
-    private lateinit var name: String
+//class Constructor private constructor() {
+//
+//    init {
+//        println("init")
+//    }
+//}
 
-    //Constructor的次构造函数
-    constructor(_name: String, _age: Int) : this(_name) {
-        this.name = _name
-        println("name:$name")
-    }
+class Constructor public constructor() {
+
 }
