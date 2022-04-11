@@ -7,6 +7,18 @@ fun main() {
     var hasPerfix = hasPerfix(3)
 
     println("hasPerfix = $hasPerfix")
+
+    var a = "2"
+
+    var level = when(a) {
+        "1" -> 1
+
+        "2" -> 2
+
+        else -> "weizhi"
+    }
+
+    println("level = $level")
 }
 
 fun describe(obj: Any, s: String): Any =
