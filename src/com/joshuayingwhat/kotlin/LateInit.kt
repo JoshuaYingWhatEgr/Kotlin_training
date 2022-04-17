@@ -4,7 +4,7 @@ fun main() {
 
     var lateInit = LateInit()
 
-    lateInit.initString()
+    lateInit.initStrings()
 
     lateInit.showString()
 }
@@ -13,12 +13,12 @@ class LateInit {
 
     lateinit var initString: String
 
-    fun initString() {
+    fun initStrings() {
         initString = "kotlin"
     }
 
 
     fun showString() {
-        println("initString :  $initString")
+        if (::initString.isInitialized) println("initString :  $initString")
     }
 }
