@@ -9,9 +9,7 @@ fun main() {
 class Student(_name: String, var _age: Int = 20) {
 
     constructor(_name: String) : this(_name, _age = 20) {
-
-        println("constructor")
-
+        
         var name = _name
     }
 
